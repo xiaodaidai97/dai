@@ -1,0 +1,53 @@
+1.Cloneable接口
+	实体类实现这个借口，内存中会有两个内容一样但是地址不同的两个对象
+2.  GIT
+	
+	git add read.txt //添加到暂存区
+	git commit -m "提交说明" //提交到工作区
+	
+	第一次修改 -> git add -> 第二次修改 -> git add -> git commit
+	
+	cat 文件名     //查看文件内容
+	
+	git status    //查看当前仓库的状态
+	git diff 文件名  //查看文件修改的内容
+	q    //退出git diff
+	
+	git log    //显示从最近到以前的提交日志
+	git log --pretty=oneline   //简单的显示
+	
+	git reset --hard HEAD^     //回退到上一个版本
+	git reset --head HEAD^3    //后退三个版本
+	git reset --head 版本号（前几位就可以了）
+	
+	git checkout -- file（文件名）   //丢弃工作区的修改
+	git reset HEAD 文件名       //可以把添加到暂存区的修改销掉（接着再git checkout -- file丢弃工作区的修改）
+	
+	
+	git rm file(文件名)    //从版本库中删除该文件
+	并且git commit -m  "提交说明"  
+	
+	git checkout -- file    //无论工作区是修改还是删除，都可以“一键还原”
+	
+	
+	
+	分支：
+	
+	创建分支dev
+	git checkout -b dev 创建并切换分支 <==>  (1)git branch dev 创建分支 (2)git checkout dev 切换分支到dev
+	git branch 查看所有分支  加*的是当前分支
+	
+	切换到master分支
+	git merge dev   //把分支dev合并到当前分支（master）
+	
+	git branch -d dev   //删除dev分支
+	
+	git log --graph     //查看分支合并图
+	
+	
+	解决冲突：
+	当 Git 无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成
+	
+	
+	
+	
